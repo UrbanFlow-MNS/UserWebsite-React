@@ -23,6 +23,13 @@ const App = () => {
             English
           </button>
         </div>
+
+        <button onClick={async () => {
+          const x = 42;
+          console.log(await x)
+        }}>
+          Push X
+        </button>
       </div>
     </div>
   )
