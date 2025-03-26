@@ -26,7 +26,7 @@ const App = () => {
 
         <button onClick={async () => {
           const x = 42;
-          console.log(await x)
+          await x
         }}>
           Push X
         </button>
