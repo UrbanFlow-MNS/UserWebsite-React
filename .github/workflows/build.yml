@@ -15,8 +15,17 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
       - name: Install dependencies
         run: npm install
+
+      - name: Install TypeScript latest
+        run: npm install -g typescript@latest
 
       - name: Run tests with coverage
         run: npm run coverage
@@ -32,9 +41,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
-          args: >
-            -X
-            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
+          args: -X
       # If you wish to fail your job when the Quality Gate is red, uncomment the
       # following lines. This would typically be used to fail a deployment.
       # - uses: sonarsource/sonarqube-quality-gate-action@master
