@@ -25,6 +25,34 @@ export class ComplexMethod {
       return 'five';
     }
 
+    if (num === 6) {
+      return 'six';
+    }
+
+    if (num === 7) {
+      return 'seven';
+    }
+
+    if (num === 8) {
+      return 'eight';
+    }
+
+    if (num === 9) {
+      return 'nine';
+    }
+
+    if (num === 10) {
+      return 'ten';
+    }
+
+    if (num === 11) {
+      return 'eleven';
+    }
+
+    if (num === 12) {
+      return 'twelve';
+    }
+
     return 'unknown';
   }
   
