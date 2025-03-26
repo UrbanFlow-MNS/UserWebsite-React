@@ -25,10 +25,9 @@ const App = () => {
         </div>
 
         <button onClick={async () => {
-          const x = 42;
-          await x
+          const x = 42
+          await x;
         }}>
-          Push X
         </button>
       </div>
     </div>
